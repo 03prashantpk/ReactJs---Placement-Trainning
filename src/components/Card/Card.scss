@@ -1,0 +1,77 @@
+.card-container{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 5%;
+    margin: 2%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition-duration: 0.6s;
+    position: relative;
+    &::before{
+        content: ""; 
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: -1;
+        border-radius: 5%;
+        transition-duration: 0.6s;
+        
+    }
+    &:hover::before{
+        right: 0px;
+        bottom: 0px;
+        transition-duration: 0.6s;
+        transform: rotate(10deg);
+        background-color: #f7d343;
+        
+    }
+
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition-duration: 0.6s;
+    }
+    .card-sub-container{
+          padding: 2%;
+          .card-title{
+            font-weight: 900;
+          }
+          .card-description{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+    }
+    .card-image > img{
+        width: 100%;
+        border-radius: 5% 5% 0% 0%;
+    }
+ 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    appearance: textfield;
+  }
+.age-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .age-inner{
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        background-color: #f1f1f1;
+        padding: 1%;
+        border-radius: 2%;
+        text-align: center;
+        input{
+            margin: 10px;
+        }
+    }
+}
+
